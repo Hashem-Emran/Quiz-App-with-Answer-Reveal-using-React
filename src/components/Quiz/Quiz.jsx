@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import {data} from '../../assets/data';
 
-const Quiz = () => {
+  const Quiz = () => {
   const [index, setIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
   const question = data[index];
+
 
   const handleOptionClick = (option) => {
     if (!showAnswer) {
@@ -14,7 +15,7 @@ const Quiz = () => {
     }
   };
 
-  
+
   const handleNext = () => {
     setSelectedOption(null);
     setShowAnswer(false);
@@ -24,6 +25,7 @@ const Quiz = () => {
       alert("You have completed the quiz!");
       setIndex(0);
     }
+
   };
 
   return (
@@ -40,7 +42,6 @@ const Quiz = () => {
             let className =
               "border border-gray-300 rounded px-3 py-2 cursor-pointer hover:bg-amber-100";
 
-
             if (showAnswer) {
               if (option === question.answer) {
                 className += " bg-green-300 border-green-600 font-bold";
@@ -50,7 +51,6 @@ const Quiz = () => {
                 className += " opacity-50 cursor-default";
               }
             }
-
             return (
               <li
                 key={i}
