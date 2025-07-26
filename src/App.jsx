@@ -1,14 +1,9 @@
-import React from "react";
-import Quiz from "./components/Quiz/Quiz";
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
-
   return (
-    <div>
 
     <Quiz/>
-    
-    </div>
   );
 }
 
